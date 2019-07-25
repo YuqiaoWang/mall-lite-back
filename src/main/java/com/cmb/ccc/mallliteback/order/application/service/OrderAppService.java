@@ -1,6 +1,7 @@
 package com.cmb.ccc.mallliteback.order.application.service;
 
 import com.cmb.ccc.mallliteback.order.domain.model.Address;
+import com.cmb.ccc.mallliteback.order.domain.model.Order;
 import com.cmb.ccc.mallliteback.order.domain.service.OrderService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,11 @@ public class OrderAppService {
     @Transactional
     public void generateOrder(Integer userId, String consignee, String mobile, Address address, Integer goodsPrice) {
         service.generateOrder(userId, consignee, mobile, address, goodsPrice);
+    }
+
+    @Transactional
+    public Order getCurrentOrder(Integer orderId) {
+        return service.queryById(orderId);
     }
 
 }
