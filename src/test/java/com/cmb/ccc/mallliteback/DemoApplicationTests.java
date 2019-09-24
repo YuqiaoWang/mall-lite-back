@@ -1,4 +1,4 @@
-package com.cmb.ccc.mallliteback;
+package bupt.edu.mallliteback;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
